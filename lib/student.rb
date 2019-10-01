@@ -72,6 +72,8 @@ class Student
     SELECT *
     FROM students
     WHERE grade = 9
+
+    SQL 
   end
 
 end
