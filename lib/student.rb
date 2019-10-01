@@ -20,22 +20,22 @@ class Student
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end 
+    end
 
   end
 
   def self.find_by_name(name)
 
-    sql = <<-SQL 
+    sql = <<-SQL
     SELECT *
-    FROM students 
+    FROM students
     where name = ?
     LIMIT 1
     
-    SQL 
+    SQL
 
     DB[:conn].execute(sql, name).map do |row|
-    
+
   end
 
   def save
